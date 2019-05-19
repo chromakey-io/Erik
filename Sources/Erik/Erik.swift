@@ -180,7 +180,9 @@ extension Erik {
         Erik.sharedInstance.load(urlRequest: urlRequest, completionHandler: completionHandler)
     }
 
-    @available(*, deprecated: 1.1, obsoleted: 1.2, message: "Use url")
+    //CLEAR misunderstanding and misuse of this decorator 1) can't use *
+    // this is for handling versioning of Apple-OS targets, this essentially says OSX (and iOS, etc) 1.1->1.2 obsolete/deprecated
+    //   @available(*, deprecated: 1.1, obsoleted: 1.2, message: "Use url")
     public static var currentURL: URL? {
         return Erik.sharedInstance.url
     }
