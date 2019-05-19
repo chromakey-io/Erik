@@ -1,5 +1,9 @@
 # Erik
 
+K. Noah --- Added working Package.swift.  Cleaned up Sources directory so it matches SPM requirements. Cleaned up Cartfile so it includes dependencies hiding in Cartfile.resolved.
+
+Updated ALL dependencies to latest versions.  Who knows if this will still work, but we're about to find out.  It builds cleanly with "swift build", and "carthage bootstrap or what-ever you're supposed to do" ... not fully caught up on my carthage mumbo jumbo, I just hope I never have to learn about the podracer or cocoapuffs or what-ever it's called (and yes I'm gonna keep making these name jokes till your ears bleed).
+
 [![Join the chat at https://gitter.im/phimage/Erik](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/phimage/Erik?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat
             )](http://mit-license.org) [![Platform](http://img.shields.io/badge/platform-ios_osx-lightgrey.svg?style=flat
