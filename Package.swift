@@ -10,13 +10,16 @@ let package = Package(
         .library(
             name: "Erik",
             targets: ["Erik"]),
+        .library(
+            name: "Foundation",
+            targets: ["Foundation"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         .package(url: "https://github.com/tid-kijyun/Kanna.git", .exact("5.0.0")),
         .package(url: "https://github.com/Thomvis/BrightFutures.git", .exact("8.0.1")),
         .package(url: "https://github.com/antitypical/Result.git", .exact("4.1.0")),
-        //.package(url: "https://github.com/nvzqz/FileKit/", .exact("develop")) 
+        //.package(url: "https://github.com/nvzqz/FileKit/", .exact("develop")) - for Tests which have been cut from SPM for now 
         // probably need to figure out how to use github hashes or a mechanism for "branches"
     ],
     targets: [
@@ -24,6 +27,6 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "Erik",
-            dependencies: ["Kanna", "BrightFutures", "Result"]),
+            dependencies: ["Foundation", "Kanna", "BrightFutures", "Result"]),
     ]
 )

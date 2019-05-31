@@ -1,0 +1,34 @@
+name: Erik
+options:
+    useTabs: false
+    indentWidth: 4
+    tabWidth: 4
+
+configFiles:
+    Debug: config/base.xcconfig
+    Release: config/base.xcconfig
+
+targets:
+    Erik:
+        platform: [iOS, macOS]
+        type: framework
+        sources:
+            - Sources
+        configFiles:
+            Release: config/base.xcconfig
+        dependencies:
+            - carthage: Kanna
+            - carthage: BrightFutures
+            - carthage: Result
+            - sdk: libxml2.tbd
+
+    ErikTests:
+        type: bundle.unit-test
+        platform: [iOS, macOS]
+        sources:
+            - Tests/ErikTests/
+        dependencies:
+            - carthage: Kanna
+            - carthage: BrightFutures
+            - carthage: Result
+            - carthage: FileKit
